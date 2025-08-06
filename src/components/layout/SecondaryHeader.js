@@ -21,14 +21,14 @@ export default function SecondaryHeader() {
 
   return (
     <div className="bg-green-600 text-white py-2 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="text-sm">Chào mừng bạn đến với FoodLiver!</div>
+      <div className="max-w-7xl  flex items-center justify-between">
+        <div className="text-sm">Chào mừng bạn đến với FoodLive</div>
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
             <User button onClick={handleAccountClick} className="w-4 h-4 cursor-pointer" />
             {isLoggedIn ? (
               <div className="flex items-center space-x-2">
-                <span className="text-sm">Xin chào, {user?.name}</span>
+                <span className="text-sm">Xin chào, {user.name}</span>
                 <button onClick={handleLogout} className="text-sm hover:text-gray-200 ml-2">
                   (Đăng xuất)
                 </button>

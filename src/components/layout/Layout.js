@@ -13,7 +13,7 @@ export default function Layout({ children }) {
       <MainHeader  />
       <Navigation />
       <div className="flex">
-        <Sidebar />
+                    {/* <Sidebar /> */}
         <main className="flex-1 relative">
           {children}
         </main>

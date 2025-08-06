@@ -40,12 +40,7 @@ const handleInputChange = (e) => {
 
 // Helper function to save authentication data
 const saveAuthData = (token, user, refreshToken = null) => {
-  try {
-    console.log('💾 Saving Auth Data:');
-    console.log('- Token:', token);
-    console.log('- User:', user);
-    console.log('- Role:', user.role);
-    console.log('- Refresh Token:', refreshToken);
+  try { 
 
     // Save to localStorage
     localStorage.setItem('accessToken', token);

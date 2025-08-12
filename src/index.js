@@ -6,6 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import { store } from './redux/store/store';
 import { Provider } from 'react-redux';
+import axios from 'axios';
+import { restoreUser } from './redux/store/slices/userSlice';
+
+const bootAuth = () => {
+ const token = localStorage.getItem('access_token');
+  if (token) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  }
+   // Khôi phục user state từ localStorage vào Redux
+ store.dispatch(restoreUser());
+};
+bootAuth();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

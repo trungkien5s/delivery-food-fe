@@ -21,10 +21,10 @@ export default function SecondaryHeader() {
 
   return (
     <div className="bg-green-600 text-white py-2 px-4">
-      <div className="max-w-7xl  flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="text-sm">Chào mừng bạn đến với FoodLive</div>
         <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <User button onClick={handleAccountClick} className="w-4 h-4 cursor-pointer" />
             {isLoggedIn ? (
               <div className="flex items-center space-x-2">
@@ -38,7 +38,7 @@ export default function SecondaryHeader() {
                 Tài khoản
               </button>
             )}
-          </div>
+          </div> */}
           <div className="flex items-center space-x-2">
             <Phone className="w-4 h-4" />
             <span className="text-sm">Hotline: 0376 940 811</span>

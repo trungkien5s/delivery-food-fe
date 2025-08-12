@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export default function HeroSection() {
@@ -54,7 +55,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="relative bg-gradient-to-br from-green-50 via-green-100 to-emerald-200 rounded-3xl mx-4 mt-6 overflow-hidden shadow-2xl">
+    <div className="relative bg-gradient-to-br from-green-50 via-green-100 to-emerald-200 rounded-3xl max-w-7xl mx-auto overflow-hidden shadow-2xl">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 rounded-full blur-xl"></div>
@@ -63,7 +64,7 @@ export default function HeroSection() {
       </div>
 
       {/* Full width image carousel */}
-      <div className="relative w-full h-[500px] overflow-hidden">
+      <div className="relative w-full h-[500px] overflow-hidden cursor-pointer">
         {bannerImages.map((image, index) => (
           <div
             key={index}
@@ -104,13 +105,13 @@ export default function HeroSection() {
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
         >
-          ←
+         <ArrowLeft className="w-5 h-5" />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
         >
-          →
+          <ArrowRight className="w-5 h-5" />
         </button>
 
         {/* Dots indicator */}

@@ -76,7 +76,7 @@ export default function NewShop() {
   }
 
   return (
-    <div className="max-w-7xl px-4 py-12">
+    <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-bold text-gray-800">Sản phẩm mới</h2>
         <div className="flex space-x-2">
